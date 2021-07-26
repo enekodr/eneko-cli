@@ -1,0 +1,320 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5013805424FDD1550000411D /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5013805324FDD1550000411D /* main.swift */; };
+		5013805B24FDD2FC0000411D /* IOService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5013805A24FDD2FC0000411D /* IOService.swift */; };
+		5013806124FDD79D0000411D /* ActionsEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5013806024FDD79D0000411D /* ActionsEnum.swift */; };
+		50F6E3A426AE2BD900BA20E0 /* Command.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F6E3A326AE2BD900BA20E0 /* Command.swift */; };
+		50F6E3A626AE2C4800BA20E0 /* Get.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F6E3A526AE2C4800BA20E0 /* Get.swift */; };
+		50F6E3A826AE2DBE00BA20E0 /* ColorsEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F6E3A726AE2DBE00BA20E0 /* ColorsEnum.swift */; };
+		50F6E3AA26AE2E0600BA20E0 /* Help.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F6E3A926AE2E0600BA20E0 /* Help.swift */; };
+		50F6E3AC26AE2E9100BA20E0 /* IOServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F6E3AB26AE2E9100BA20E0 /* IOServiceProtocol.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		5013804E24FDD1550000411D /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		5013805024FDD1550000411D /* eneko-cli */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "eneko-cli"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5013805324FDD1550000411D /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		5013805A24FDD2FC0000411D /* IOService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IOService.swift; sourceTree = "<group>"; };
+		5013806024FDD79D0000411D /* ActionsEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionsEnum.swift; sourceTree = "<group>"; };
+		50F6E3A326AE2BD900BA20E0 /* Command.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Command.swift; sourceTree = "<group>"; };
+		50F6E3A526AE2C4800BA20E0 /* Get.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Get.swift; sourceTree = "<group>"; };
+		50F6E3A726AE2DBE00BA20E0 /* ColorsEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorsEnum.swift; sourceTree = "<group>"; };
+		50F6E3A926AE2E0600BA20E0 /* Help.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Help.swift; sourceTree = "<group>"; };
+		50F6E3AB26AE2E9100BA20E0 /* IOServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IOServiceProtocol.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5013804D24FDD1550000411D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5013804724FDD1550000411D = {
+			isa = PBXGroup;
+			children = (
+				5013805224FDD1550000411D /* eneko-cli */,
+				5013805124FDD1550000411D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5013805124FDD1550000411D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5013805024FDD1550000411D /* eneko-cli */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5013805224FDD1550000411D /* eneko-cli */ = {
+			isa = PBXGroup;
+			children = (
+				5013805324FDD1550000411D /* main.swift */,
+				50F6E3A326AE2BD900BA20E0 /* Command.swift */,
+				50F6E3A926AE2E0600BA20E0 /* Help.swift */,
+				50F6E3A526AE2C4800BA20E0 /* Get.swift */,
+				5013806024FDD79D0000411D /* ActionsEnum.swift */,
+				50F6E3A726AE2DBE00BA20E0 /* ColorsEnum.swift */,
+				5013805A24FDD2FC0000411D /* IOService.swift */,
+				50F6E3AB26AE2E9100BA20E0 /* IOServiceProtocol.swift */,
+			);
+			path = "eneko-cli";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5013804F24FDD1550000411D /* eneko-cli */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5013805724FDD1550000411D /* Build configuration list for PBXNativeTarget "eneko-cli" */;
+			buildPhases = (
+				5013804C24FDD1550000411D /* Sources */,
+				5013804D24FDD1550000411D /* Frameworks */,
+				5013804E24FDD1550000411D /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "eneko-cli";
+			productName = "eneko-cli";
+			productReference = 5013805024FDD1550000411D /* eneko-cli */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5013804824FDD1550000411D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1160;
+				LastUpgradeCheck = 1250;
+				TargetAttributes = {
+					5013804F24FDD1550000411D = {
+						CreatedOnToolsVersion = 11.6;
+					};
+				};
+			};
+			buildConfigurationList = 5013804B24FDD1550000411D /* Build configuration list for PBXProject "eneko-cli" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5013804724FDD1550000411D;
+			productRefGroup = 5013805124FDD1550000411D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5013804F24FDD1550000411D /* eneko-cli */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5013804C24FDD1550000411D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				50F6E3A826AE2DBE00BA20E0 /* ColorsEnum.swift in Sources */,
+				5013806124FDD79D0000411D /* ActionsEnum.swift in Sources */,
+				5013805424FDD1550000411D /* main.swift in Sources */,
+				50F6E3A426AE2BD900BA20E0 /* Command.swift in Sources */,
+				50F6E3AC26AE2E9100BA20E0 /* IOServiceProtocol.swift in Sources */,
+				5013805B24FDD2FC0000411D /* IOService.swift in Sources */,
+				50F6E3A626AE2C4800BA20E0 /* Get.swift in Sources */,
+				50F6E3AA26AE2E0600BA20E0 /* Help.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		5013805524FDD1550000411D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		5013805624FDD1550000411D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		5013805824FDD1550000411D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7N3A3NRZSY;
+				ENABLE_HARDENED_RUNTIME = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		5013805924FDD1550000411D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7N3A3NRZSY;
+				ENABLE_HARDENED_RUNTIME = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5013804B24FDD1550000411D /* Build configuration list for PBXProject "eneko-cli" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5013805524FDD1550000411D /* Debug */,
+				5013805624FDD1550000411D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5013805724FDD1550000411D /* Build configuration list for PBXNativeTarget "eneko-cli" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5013805824FDD1550000411D /* Debug */,
+				5013805924FDD1550000411D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5013804824FDD1550000411D /* Project object */;
+}
