@@ -10,6 +10,8 @@
 		5013805424FDD1550000411D /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5013805324FDD1550000411D /* main.swift */; };
 		5013805B24FDD2FC0000411D /* IOService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5013805A24FDD2FC0000411D /* IOService.swift */; };
 		5013806124FDD79D0000411D /* ActionsEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5013806024FDD79D0000411D /* ActionsEnum.swift */; };
+		50EE72E126AF78850066E693 /* CommandErrorEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50EE72E026AF78850066E693 /* CommandErrorEnum.swift */; };
+		50EE72E326AF85490066E693 /* Secrets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50EE72E226AF85490066E693 /* Secrets.swift */; };
 		50F6E3A426AE2BD900BA20E0 /* Command.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F6E3A326AE2BD900BA20E0 /* Command.swift */; };
 		50F6E3A626AE2C4800BA20E0 /* Get.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F6E3A526AE2C4800BA20E0 /* Get.swift */; };
 		50F6E3A826AE2DBE00BA20E0 /* ColorsEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F6E3A726AE2DBE00BA20E0 /* ColorsEnum.swift */; };
@@ -30,10 +32,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		5013805024FDD1550000411D /* eneko-cli */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "eneko-cli"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5013805024FDD1550000411D /* eneko */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = eneko; sourceTree = BUILT_PRODUCTS_DIR; };
 		5013805324FDD1550000411D /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		5013805A24FDD2FC0000411D /* IOService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IOService.swift; sourceTree = "<group>"; };
 		5013806024FDD79D0000411D /* ActionsEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionsEnum.swift; sourceTree = "<group>"; };
+		50EE72E026AF78850066E693 /* CommandErrorEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandErrorEnum.swift; sourceTree = "<group>"; };
+		50EE72E226AF85490066E693 /* Secrets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Secrets.swift; sourceTree = "<group>"; };
 		50F6E3A326AE2BD900BA20E0 /* Command.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Command.swift; sourceTree = "<group>"; };
 		50F6E3A526AE2C4800BA20E0 /* Get.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Get.swift; sourceTree = "<group>"; };
 		50F6E3A726AE2DBE00BA20E0 /* ColorsEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorsEnum.swift; sourceTree = "<group>"; };
@@ -63,7 +67,7 @@
 		5013805124FDD1550000411D /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				5013805024FDD1550000411D /* eneko-cli */,
+				5013805024FDD1550000411D /* eneko */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -77,8 +81,10 @@
 				50F6E3A526AE2C4800BA20E0 /* Get.swift */,
 				5013806024FDD79D0000411D /* ActionsEnum.swift */,
 				50F6E3A726AE2DBE00BA20E0 /* ColorsEnum.swift */,
+				50EE72E026AF78850066E693 /* CommandErrorEnum.swift */,
 				5013805A24FDD2FC0000411D /* IOService.swift */,
 				50F6E3AB26AE2E9100BA20E0 /* IOServiceProtocol.swift */,
+				50EE72E226AF85490066E693 /* Secrets.swift */,
 			);
 			path = "eneko-cli";
 			sourceTree = "<group>";
@@ -86,9 +92,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		5013804F24FDD1550000411D /* eneko-cli */ = {
+		5013804F24FDD1550000411D /* eneko */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 5013805724FDD1550000411D /* Build configuration list for PBXNativeTarget "eneko-cli" */;
+			buildConfigurationList = 5013805724FDD1550000411D /* Build configuration list for PBXNativeTarget "eneko" */;
 			buildPhases = (
 				5013804C24FDD1550000411D /* Sources */,
 				5013804D24FDD1550000411D /* Frameworks */,
@@ -98,9 +104,9 @@
 			);
 			dependencies = (
 			);
-			name = "eneko-cli";
+			name = eneko;
 			productName = "eneko-cli";
-			productReference = 5013805024FDD1550000411D /* eneko-cli */;
+			productReference = 5013805024FDD1550000411D /* eneko */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
@@ -130,7 +136,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				5013804F24FDD1550000411D /* eneko-cli */,
+				5013804F24FDD1550000411D /* eneko */,
 			);
 		};
 /* End PBXProject section */
@@ -141,8 +147,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				50F6E3A826AE2DBE00BA20E0 /* ColorsEnum.swift in Sources */,
+				50EE72E326AF85490066E693 /* Secrets.swift in Sources */,
 				5013806124FDD79D0000411D /* ActionsEnum.swift in Sources */,
 				5013805424FDD1550000411D /* main.swift in Sources */,
+				50EE72E126AF78850066E693 /* CommandErrorEnum.swift in Sources */,
 				50F6E3A426AE2BD900BA20E0 /* Command.swift in Sources */,
 				50F6E3AC26AE2E9100BA20E0 /* IOServiceProtocol.swift in Sources */,
 				5013805B24FDD2FC0000411D /* IOService.swift in Sources */,
@@ -305,7 +313,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		5013805724FDD1550000411D /* Build configuration list for PBXNativeTarget "eneko-cli" */ = {
+		5013805724FDD1550000411D /* Build configuration list for PBXNativeTarget "eneko" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				5013805824FDD1550000411D /* Debug */,
