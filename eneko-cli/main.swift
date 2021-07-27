@@ -10,17 +10,42 @@ import Foundation
 
 CommandLine.arguments.removeFirst()
 var arguments = CommandLine.arguments
-let service = IOService()
-guard let actionString = arguments.first else { service.write("eneko-cli version 1.0.0", color: .white); exit(0) }
-guard let action = Action(rawValue: actionString) else { service.write("Unavaliable command \(actionString)", color: .red); exit(1) }
+let ioService = IOService()
 
-var exitCode: Int32 = 0
-arguments.removeFirst()
-switch action {
-case .help: exitCode = Help(ioService: service).execute(args: arguments); break
-case .get: exitCode = Get().execute(args: arguments); break
-case .contact: break
-case .download: break
-case .visit: break
+guard let actionString = arguments.first else {
+    ioService.write("eneko-cli version 1.0.0")
+    exit(0)
 }
-exit(exitCode)
+
+do {
+    guard let action = Action(rawValue: actionString) else { throw CommandError.invalidAction(actionString) }
+    arguments.removeFirst()
+    switch action {
+    case .help: try Help(ioService: ioService).execute(args: arguments); break
+    case .get: try Get(ioService: ioService).execute(args: arguments); break
+    case .see: break
+    case .contact: break
+    case .download: break
+    }
+} catch CommandError.invalidAction(let action) {
+    ioService.setOutputColor(.red)
+    ioService.write("\nInvalid command: \(action)")
+    ioService.setOutputColor(.noColor)
+    Help(ioService: ioService).showUsageDescription()
+} catch CommandError.informationNotAvailable(let information) {
+    ioService.setOutputColor(.red)
+    ioService.write("\nInformation not available: \(information)")
+    ioService.setOutputColor(.noColor)
+    Get(ioService: ioService).showUsageDescription()
+} catch CommandError.resourceNotAvailable(let resource) {
+    ioService.setOutputColor(.red)
+    ioService.write("\nResource not available: \(resource)")
+} catch CommandError.pageNotAvailable(let page) {
+    ioService.setOutputColor(.red)
+    ioService.write("\nPage not available: \(page)")
+    ioService.setOutputColor(.noColor)
+} catch {
+    ioService.setOutputColor(.red)
+    ioService.write("\nUnexpected error happened\n")
+}
+
