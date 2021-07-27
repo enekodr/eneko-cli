@@ -10,6 +10,7 @@ import Foundation
 protocol IOServiceProtocol {
     
     func read(_ input: String)
-    func write(_ message: String, color: Color?)
+    func write(_ message: String)
+    func setOutputColor(_ color: Color)
     
 }

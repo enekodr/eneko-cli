@@ -9,13 +9,19 @@ import Foundation
 
 class IOService: IOServiceProtocol {
     
+    var outputColor: Color = .noColor
+    
     func read(_ input: String) {
         // TODO: implement
     }
     
-    func write(_ message: String, color: Color?) {
-        let textColor = color ?? .white
-        print("\(textColor.rawValue)\(message)\(Color.white.rawValue)")
+    func write(_ message: String) {
+        let messageToPrint = "\(outputColor.rawValue)\(message)\(Color.noColor.rawValue)"
+        print(messageToPrint)
+    }
+    
+    func setOutputColor(_ color: Color) {
+        outputColor = color
     }
     
 }
