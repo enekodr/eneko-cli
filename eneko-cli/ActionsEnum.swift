@@ -9,6 +9,7 @@ import Foundation
 
 enum Action: String {
     case help = "help"
+    case version = "version"
     case get = "get"
     case contact = "contact"
     case download = "download"

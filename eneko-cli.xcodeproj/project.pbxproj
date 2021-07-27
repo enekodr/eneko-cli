@@ -12,6 +12,10 @@
 		5013806124FDD79D0000411D /* ActionsEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5013806024FDD79D0000411D /* ActionsEnum.swift */; };
 		50EE72E126AF78850066E693 /* CommandErrorEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50EE72E026AF78850066E693 /* CommandErrorEnum.swift */; };
 		50EE72E326AF85490066E693 /* Secrets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50EE72E226AF85490066E693 /* Secrets.swift */; };
+		50EE72E526AF88480066E693 /* DatetimeServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50EE72E426AF88480066E693 /* DatetimeServiceProtocol.swift */; };
+		50EE72E726AF88A10066E693 /* DatetimeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50EE72E626AF88A10066E693 /* DatetimeService.swift */; };
+		50EE72E926AF89B90066E693 /* NetworkErrorEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50EE72E826AF89B90066E693 /* NetworkErrorEnum.swift */; };
+		50EE72F026AF95BE0066E693 /* Version.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50EE72EF26AF95BE0066E693 /* Version.swift */; };
 		50F6E3A426AE2BD900BA20E0 /* Command.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F6E3A326AE2BD900BA20E0 /* Command.swift */; };
 		50F6E3A626AE2C4800BA20E0 /* Get.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F6E3A526AE2C4800BA20E0 /* Get.swift */; };
 		50F6E3A826AE2DBE00BA20E0 /* ColorsEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F6E3A726AE2DBE00BA20E0 /* ColorsEnum.swift */; };
@@ -38,6 +42,10 @@
 		5013806024FDD79D0000411D /* ActionsEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionsEnum.swift; sourceTree = "<group>"; };
 		50EE72E026AF78850066E693 /* CommandErrorEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandErrorEnum.swift; sourceTree = "<group>"; };
 		50EE72E226AF85490066E693 /* Secrets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Secrets.swift; sourceTree = "<group>"; };
+		50EE72E426AF88480066E693 /* DatetimeServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatetimeServiceProtocol.swift; sourceTree = "<group>"; };
+		50EE72E626AF88A10066E693 /* DatetimeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatetimeService.swift; sourceTree = "<group>"; };
+		50EE72E826AF89B90066E693 /* NetworkErrorEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkErrorEnum.swift; sourceTree = "<group>"; };
+		50EE72EF26AF95BE0066E693 /* Version.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Version.swift; sourceTree = "<group>"; };
 		50F6E3A326AE2BD900BA20E0 /* Command.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Command.swift; sourceTree = "<group>"; };
 		50F6E3A526AE2C4800BA20E0 /* Get.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Get.swift; sourceTree = "<group>"; };
 		50F6E3A726AE2DBE00BA20E0 /* ColorsEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorsEnum.swift; sourceTree = "<group>"; };
@@ -76,17 +84,53 @@
 			isa = PBXGroup;
 			children = (
 				5013805324FDD1550000411D /* main.swift */,
-				50F6E3A326AE2BD900BA20E0 /* Command.swift */,
-				50F6E3A926AE2E0600BA20E0 /* Help.swift */,
-				50F6E3A526AE2C4800BA20E0 /* Get.swift */,
 				5013806024FDD79D0000411D /* ActionsEnum.swift */,
 				50F6E3A726AE2DBE00BA20E0 /* ColorsEnum.swift */,
-				50EE72E026AF78850066E693 /* CommandErrorEnum.swift */,
-				5013805A24FDD2FC0000411D /* IOService.swift */,
-				50F6E3AB26AE2E9100BA20E0 /* IOServiceProtocol.swift */,
 				50EE72E226AF85490066E693 /* Secrets.swift */,
+				50EE72EA26AF8A170066E693 /* Commands */,
+				50EE72EC26AF8A440066E693 /* Errors */,
+				50EE72EE26AF8A6A0066E693 /* Services */,
+				50EE72ED26AF8A510066E693 /* Interfaces */,
 			);
 			path = "eneko-cli";
+			sourceTree = "<group>";
+		};
+		50EE72EA26AF8A170066E693 /* Commands */ = {
+			isa = PBXGroup;
+			children = (
+				50F6E3A326AE2BD900BA20E0 /* Command.swift */,
+				50F6E3A926AE2E0600BA20E0 /* Help.swift */,
+				50EE72EF26AF95BE0066E693 /* Version.swift */,
+				50F6E3A526AE2C4800BA20E0 /* Get.swift */,
+			);
+			path = Commands;
+			sourceTree = "<group>";
+		};
+		50EE72EC26AF8A440066E693 /* Errors */ = {
+			isa = PBXGroup;
+			children = (
+				50EE72E026AF78850066E693 /* CommandErrorEnum.swift */,
+				50EE72E826AF89B90066E693 /* NetworkErrorEnum.swift */,
+			);
+			path = Errors;
+			sourceTree = "<group>";
+		};
+		50EE72ED26AF8A510066E693 /* Interfaces */ = {
+			isa = PBXGroup;
+			children = (
+				50F6E3AB26AE2E9100BA20E0 /* IOServiceProtocol.swift */,
+				50EE72E426AF88480066E693 /* DatetimeServiceProtocol.swift */,
+			);
+			path = Interfaces;
+			sourceTree = "<group>";
+		};
+		50EE72EE26AF8A6A0066E693 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				5013805A24FDD2FC0000411D /* IOService.swift */,
+				50EE72E626AF88A10066E693 /* DatetimeService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -148,12 +192,16 @@
 			files = (
 				50F6E3A826AE2DBE00BA20E0 /* ColorsEnum.swift in Sources */,
 				50EE72E326AF85490066E693 /* Secrets.swift in Sources */,
+				50EE72F026AF95BE0066E693 /* Version.swift in Sources */,
 				5013806124FDD79D0000411D /* ActionsEnum.swift in Sources */,
 				5013805424FDD1550000411D /* main.swift in Sources */,
 				50EE72E126AF78850066E693 /* CommandErrorEnum.swift in Sources */,
 				50F6E3A426AE2BD900BA20E0 /* Command.swift in Sources */,
+				50EE72E726AF88A10066E693 /* DatetimeService.swift in Sources */,
+				50EE72E526AF88480066E693 /* DatetimeServiceProtocol.swift in Sources */,
 				50F6E3AC26AE2E9100BA20E0 /* IOServiceProtocol.swift in Sources */,
 				5013805B24FDD2FC0000411D /* IOService.swift in Sources */,
+				50EE72E926AF89B90066E693 /* NetworkErrorEnum.swift in Sources */,
 				50F6E3A626AE2C4800BA20E0 /* Get.swift in Sources */,
 				50F6E3AA26AE2E0600BA20E0 /* Help.swift in Sources */,
 			);

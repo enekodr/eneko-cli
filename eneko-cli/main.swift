@@ -11,6 +11,7 @@ import Foundation
 CommandLine.arguments.removeFirst()
 var arguments = CommandLine.arguments
 let ioService = IOService()
+let datetimeService = DatetimeService()
 
 guard let actionString = arguments.first else {
     ioService.write("eneko-cli version 1.0.0")
@@ -22,7 +23,8 @@ do {
     arguments.removeFirst()
     switch action {
     case .help: try Help(ioService: ioService).execute(args: arguments); break
-    case .get: try Get(ioService: ioService).execute(args: arguments); break
+    case .version: try Version(ioService: ioService).execute(args: arguments); break
+    case .get: try Get(ioService: ioService, datetimeService: datetimeService).execute(args: arguments); break
     case .see: break
     case .contact: break
     case .download: break
@@ -36,7 +38,7 @@ do {
     ioService.setOutputColor(.red)
     ioService.write("\nInformation not available: \(information)")
     ioService.setOutputColor(.noColor)
-    Get(ioService: ioService).showUsageDescription()
+    Get(ioService: ioService, datetimeService: datetimeService).showUsageDescription()
 } catch CommandError.resourceNotAvailable(let resource) {
     ioService.setOutputColor(.red)
     ioService.write("\nResource not available: \(resource)")
