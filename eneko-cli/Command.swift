@@ -9,7 +9,7 @@ import Foundation
 
 protocol Command {
     
-    func execute(args: [String]?) -> Int32
+    func execute(args: [String]?) throws
     func showUsageDescription()
     
 }

@@ -9,42 +9,52 @@ import Foundation
 
 struct Help: Command {
     
-    private let uiService: IOServiceProtocol
+    private let ioService: IOServiceProtocol
     
     init(ioService: IOServiceProtocol) {
-        uiService = service
+        self.ioService = ioService
     }
     
-    func execute(args: [String]?) -> Int32 {
+    func execute(args: [String]?) throws {
         let message = """
+        
         Available commands:
 
-                get [option] - gets the requested information about Eneko
-                download [option] - downloads useful assets
-                visit [option] - navigate through related web pages
+                get [infomation] - gets the requested information about Eneko
+                download [resource] - downloads useful assets
                 contact [option] - performs operations to get in touch with Eneko
+                see [page] - navigate through related web pages
 
         Usage examples:
 
                 eneko get name
                 eneko download cv
                 eneko contact email
-                eneko visit github
+                eneko see github
 
         To get more info about each command, type:
 
                 eneko [command] help
+        
         """
-        uiService.write(message, color: .white)
-        return 0
+        ioService.write(message)
     }
     
     func showUsageDescription() {
         let message = """
+        
+        These are the available commands
+
+                get [infomation] - gets the requested information about Eneko
+                download [resource] - downloads useful assets
+                visit [page] - navigate through related web pages
+                contact [option] - performs operations to get in touch with Eneko
+        
         To get more info about each command, type:
 
                 eneko [command] help
+        
         """
-        uiService.write(message, color: .white)
+        ioService.write(message)
     }
 }
