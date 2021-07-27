@@ -12,5 +12,5 @@ enum Action: String {
     case get = "get"
     case contact = "contact"
     case download = "download"
-    case visit = "visit"
+    case see = "see"
 }
